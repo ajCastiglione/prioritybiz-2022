@@ -1,0 +1,39 @@
+.footer {
+    background-color: $primary;
+    color: $white;
+    padding: 24px 0;
+    text-align: center;
+    @include bp("tablet") {
+        text-align: left;
+    }
+    .developer {
+        @include bp("tablet") {
+            text-align: right;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        padding-bottom: 2px;
+        transition: all 300ms ease;
+
+        &:after {
+            position: absolute;
+            width: 30px;
+            content: "";
+            height: 2px;
+            background-color: $white;
+            bottom: 0;
+            left: 0;
+            transition: all 300ms ease;
+        }
+        &:hover {
+            color: darken($white, 12%);
+            &:after {
+                width: 100%;
+                background-color: darken($white, 12%);
+            }
+        }
+    }
+}

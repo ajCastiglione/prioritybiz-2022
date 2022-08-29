@@ -1,0 +1,21 @@
+@import "../../library/scss/functions";
+
+#services-block {
+    .services {
+        &__cards {
+            padding: 0 12px;
+            .card {
+                padding: 10px 16px;
+                height: 100%;
+                border: 1px solid $gray;
+                border-radius: 5px;
+                &-img-top {
+                    max-width: 240px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

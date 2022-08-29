@@ -1,0 +1,48 @@
+.mobile-nav-container {
+    @include bp("laptop") {
+        display: none;
+    }
+
+    // Icon bars
+    .nav-toggle {
+        font-size: 30px;
+        color: $secondary;
+        transition: $animate;
+        &:focus,
+        &:active {
+            color: $primary;
+        }
+    }
+
+    // Mobile nav items
+    ul.mobile-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 150px;
+        left: -100%;
+        opacity: 0;
+        transition: all 300ms ease;
+        width: 100%;
+        height: 100vh;
+        background-color: $white;
+        border-top: 2px solid $primary;
+        padding-top: 32px;
+        &.active {
+            left: 0;
+            opacity: 1;
+        }
+        li {
+            margin-bottom: 1rem;
+            a {
+                display: inline-block;
+                padding: 0.5em 0.25em 0.15em;
+                font-size: 1.75em;
+                &:hover,
+                &:focus {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

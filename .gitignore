@@ -1,0 +1,73 @@
+# folders and files to be ignored by git
+
+############
+## Bones
+############
+
+Bones.esproj/
+node_modules
+package-lock.json
+library/js/dist/
+library/css/style.css
+library/css/login.css
+library/dist/*
+# Include fonts
+!library/dist/fonts
+
+#############
+## Build maps
+#############
+*.map
+*.lock
+
+############
+## IDEs
+############
+
+*.pydevproject
+.project
+.metadata
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+.cproject
+.buildpath
+nbproject/
+.vscode
+
+############
+## OSes
+############
+
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_store
+.DS_store?
+
+############
+## Misc
+############
+
+bin/
+tmp/
+*.tmp
+*.bak
+*.log
+*.[Cc]ache
+*.cpr
+*.orig
+*.php.in
+.idea/
+temp/
+._*
+.Trashes
+
+.svn
+
+*.codekit
+*.scssc

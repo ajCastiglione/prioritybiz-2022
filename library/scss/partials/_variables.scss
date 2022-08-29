@@ -1,0 +1,32 @@
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out: http://0to255.com/
+*********************/
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+$black: #222;
+$white: #fff;
+$gray: #aaaaaa;
+$light-gray: #f8f9fa;
+$text-color: #5c6b80;
+$meta-gray: #9fa6b4;
+$tan: #eceee5;
+$green: #1bcf36;
+$bones-pink: #f01d4f;
+$link-color: $bones-pink;
+$link-hover: darken($link-color, 9%);
+$border-color: #ccc;
+$disabled-gray: #cfcfcf;
+
+// Custom colors
+$primary: #1451a2;
+$secondary: #ed222c;
+
+$lightBlue: lighten($primary, 25%);
+$lightRed: lighten($secondary, 25%);
+
+// Animations
+$animate: all 300ms ease;

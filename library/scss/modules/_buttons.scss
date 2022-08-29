@@ -1,0 +1,35 @@
+%btn {
+    display: inline-block;
+    position: relative;
+    font-family: $sans-serif;
+    text-decoration: none;
+    color: $white;
+    background-color: $black;
+    font-size: 0.9em;
+    font-size: 1.15em;
+    line-height: 34px;
+    font-weight: normal;
+    padding: 6px 24px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    // hovering on the btn
+    &:hover,
+    &:focus {
+        color: $white;
+        text-decoration: none;
+        outline: none;
+        background-color: lighten($black, 15%);
+    } // end hover
+
+    // clicking on the button
+    &:active {
+        top: 1px; // adds a tiny hop to the click
+    } // end active
+} // end .button
+
+.btn {
+    @extend %btn;
+}
