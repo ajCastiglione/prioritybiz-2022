@@ -60,6 +60,12 @@ a:visited {
         background-color: transparent;
         color: $secondary;
     }
+    &:visited {
+        color: $white;
+        &:hover {
+            color: $secondary;
+        }
+    }
 }
 
 .wp-block-button {
