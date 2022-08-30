@@ -15,7 +15,7 @@
             transform: scale(0.65);
         }
         .top-nav li a {
-            font-size: 1.2em;
+            font-size: 1em;
         }
     }
     &__split {
@@ -38,6 +38,6 @@
     #logo {
         transition: all 300ms ease;
         margin: 0;
-        max-width: 200px;
+        max-width: 175px;
     }
 }

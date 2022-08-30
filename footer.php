@@ -7,9 +7,9 @@
 			<div class="row align-items-center">
 
 				<div class="copyright col-sm-12 col-md-6 mb-2">
-					<span>&copy; <?php echo date('Y'); ?> Prioritybiz Logistics.</span>
+					<span>&copy; <?php echo date( 'Y' ); ?> Prioritybiz, Inc.</span>
 					|
-					<a href="<?= site_url() ?>/privacy-policy">Privacy Policy</a>
+					<a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a>
 				</div>
 
 				<div class="developer col-sm-12 col-md-6 mb-2">
