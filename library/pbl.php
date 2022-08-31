@@ -106,7 +106,7 @@ function pbl_scripts_and_styles() {
 	if ( ! is_admin() ) {
 
 		// register main stylesheet
-		wp_register_style( 'mwd-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'mwd-stylesheet', get_stylesheet_directory_uri() . '/library/dist/style.css', array(), '', 'all' );
 
 		// External stylesheets
 		wp_register_style( 'bs-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap-grid.min.css', array( 'mwd-stylesheet' ), false );

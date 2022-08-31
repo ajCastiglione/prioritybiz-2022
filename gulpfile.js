@@ -18,11 +18,11 @@ const config = {
 	},
 	sassEntry: {
 		src: path.join( __dirname, 'library/scss/style.scss' ),
-		dist: path.join( __dirname, 'library/css' ),
+		dist: path.join( __dirname, 'library/dist' ),
 	},
 	editorEntry: {
 		src: path.join( __dirname, 'library/scss/editor-style.scss' ),
-		dist: path.join( __dirname, 'library/css' ),
+		dist: path.join( __dirname, 'library/dist' ),
 	},
 	js: {
 		src: path.join( __dirname, 'library/js/scripts.js' ),
