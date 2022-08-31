@@ -41,7 +41,7 @@ jobs:
 
             # Installs NPM packages
             - name: Install deps
-              if: steps.cache.outputs.cache-hit != "true"
+              if: steps.cache.outputs.cache-hit != 'true'
               run: npm install
 
             # Runs build command to compile assets
@@ -50,4 +50,4 @@ jobs:
 
             # Pushes assets to dev site
             - name: Deploy compiled site
-              run: lftp -e " set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -p 22 sftp://${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}; mirror --exclude ./node_modules -X .* -X .*/ --reverse --verbose --delete . /home/pbl_prod/prioritybizlogistics.com/wp-content/themes/mwd; bye"
+              run: lftp -e " set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -p 22 sftp://${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}; mirror --exclude ./node_modules -X .* -X .*/ --reverse --verbose --delete . /home/dh_xjrack/pbz-dev.prioritybiz.com/wp-content/themes/mwd; bye"
