@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "gulp",
-        "build": "gulp build && rm -rf node_modules",
-        "build_local": "gulp build"
+        "build": "gulp build"
     },
     "author": "Antonio Castiglione",
     "license": "ISC",
