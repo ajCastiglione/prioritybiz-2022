@@ -1,0 +1,40 @@
+.partners {
+    margin-bottom: 48px;
+    &__title {
+        text-align: center;
+        margin-bottom: 24px;
+        @include bp(laptop) {
+            margin-bottom: 36px;
+        }
+    }
+    &__gallery {
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        .image {
+            max-width: 150px;
+            max-height: 100px;
+            margin: auto;
+            filter: grayscale(1);
+        }
+        .slick-track {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            .slick-slide {
+                height: inherit;
+                text-align: center;
+                > div {
+                    height: 100%;
+                }
+            }
+        }
+        .slick-dots {
+            bottom: -40px;
+            li {
+                margin: 0;
+            }
+        }
+    }
+}

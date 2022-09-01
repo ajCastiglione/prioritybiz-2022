@@ -29,6 +29,19 @@ function my_acf_init() {
 				'keywords'        => array( 'cta', 'link', 'button' ),
 			)
 		);
+		acf_register_block_type(
+			array(
+				'name'            => 'featured-partners',
+				'title'           => __( 'Featured Partners' ),
+				'description'     => __( 'Display a grid of featured partner logos.' ),
+				'render_callback' => 'render_callback',
+				'category'        => 'layout',
+				'icon'            => 'format-gallery',
+				'mode'            => 'edit',
+				'align'           => 'wide',
+				'keywords'        => array( 'partners', 'gallery', 'logos' ),
+			)
+		);
 	}
 }
 
