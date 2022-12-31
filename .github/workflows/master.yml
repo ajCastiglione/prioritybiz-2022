@@ -27,7 +27,7 @@ jobs:
 
             # Installs LFTP
             - name: Install LFTP
-              run: apt-get install -y lftp
+              run: apt-get install -y lftp --force-yes
 
             # Cache node_modules
             - name: Cache
