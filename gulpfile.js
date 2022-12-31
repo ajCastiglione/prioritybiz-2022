@@ -14,7 +14,7 @@ const sourcemaps = require( 'gulp-sourcemaps' );
 
 const config = {
 	bs: {
-		proxy: 'http://pbz.test/',
+		proxy: 'http://prioritybiz.test/',
 	},
 	sassEntry: {
 		src: path.join( __dirname, 'library/scss/style.scss' ),
