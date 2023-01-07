@@ -13,6 +13,7 @@ library/css/login.css
 library/dist/*
 # Include fonts
 !library/dist/fonts
+*cache
 
 #############
 ## Build maps
