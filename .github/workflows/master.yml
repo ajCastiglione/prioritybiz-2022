@@ -21,22 +21,6 @@ jobs:
             - name: Get latest code
               uses: actions/checkout@v3
 
-            # # Update OS
-            # - name: Update OS
-            #   run: apt-get update -qy
-
-            # Add SSH key
-            # - name: Add SSH key
-            #   uses: shimataro/ssh-key-action@v2
-            #   with:
-            #       key: ${{ secrets.SSH_PRIVATE_KEY }}
-            #       name: id_rsa
-            #       known_hosts: ssh-keyscan -H ${{ secrets.FTP_HOST }} >> ~/.ssh/known_hosts
-
-            # # Installs LFTP
-            # - name: Install LFTP
-            #   run: apt-get install -y lftp --force-yes
-
             # Cache node_modules
             - name: Cache
               id: cache
@@ -66,15 +50,3 @@ jobs:
                 remote_host: ${{ secrets.FTP_HOST }}
                 remote_user: ${{ secrets.FTP_USERNAME }}
                 remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-              # run: rsync -avz --delete \
-              #       --exclude ".git/" \
-              #       --exclude ".github/" \
-              #       --exclude "node_modules" \
-              #       --exclude "library/translations" \
-              #       --rsh "ssh -i /root/.ssh/id_rsa -p 22" \
-              #       . ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}:/applications/fuangfqvqn/public_html/wp-content/themes/mwd
-
-            # # Pushes assets to dev site
-            # - name: Deploy compiled site
-            #   run: lftp -e " set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -p 22 sftp://${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}; mirror --exclude ^node_modules -X .* -X .*/ --reverse --verbose --delete . /applications/fuangfqvqn/public_html/wp-content/themes/mwd; bye"
