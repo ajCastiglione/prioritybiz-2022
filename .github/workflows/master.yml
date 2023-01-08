@@ -25,9 +25,9 @@ jobs:
             - name: Update OS
               run: apt-get update -qy
 
-            # Installs LFTP
-            - name: Install LFTP
-              run: apt-get install -y lftp --force-yes
+            # # Installs LFTP
+            # - name: Install LFTP
+            #   run: apt-get install -y lftp --force-yes
 
             # Cache node_modules
             - name: Cache
@@ -48,6 +48,15 @@ jobs:
             - name: Compile assets
               run: npm run build
 
-            # Pushes assets to dev site
+            # New deploy using rsync
             - name: Deploy compiled site
-              run: lftp -e " set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -p 22 sftp://${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}; mirror --exclude ^node_modules -X .* -X .*/ --reverse --verbose --delete . /applications/fuangfqvqn/public_html/wp-content/themes/mwd; bye"
+              run: rsync -avz --delete \
+                    --exclude ".git/" \
+                    --exclude ".github/" \
+                    --exclude "node_modules" \
+                    --exclude "library/translations" \
+                    . ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}:/applications/fuangfqvqn/public_html/wp-content/themes/mwd
+
+            # # Pushes assets to dev site
+            # - name: Deploy compiled site
+            #   run: lftp -e " set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -p 22 sftp://${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}; mirror --exclude ^node_modules -X .* -X .*/ --reverse --verbose --delete . /applications/fuangfqvqn/public_html/wp-content/themes/mwd; bye"
