@@ -60,7 +60,7 @@ jobs:
             - name: Deploy compiled site
               uses: burnett01/rsync-deployments@5.2.1
               with:
-                switches: -avzr -O --delete --exclude ".git/" --exclude ".github/" --exclude "node_modules" --exclude "library/translation"
+                switches: -avzr -O --delete --no-perms --exclude ".git/" --exclude ".github/" --exclude "node_modules" --exclude "library/translation"
                 path: ./
                 remote_path: ~/applications/fuangfqvqn/public_html/wp-content/themes/mwd/
                 remote_host: ${{ secrets.FTP_HOST }}
