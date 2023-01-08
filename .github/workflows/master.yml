@@ -63,6 +63,7 @@ jobs:
                     --exclude ".github/" \
                     --exclude "node_modules" \
                     --exclude "library/translations" \
+                    --rsh "ssh -i /root/.ssh/id_rsa -p 22" \
                     . ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}:/applications/fuangfqvqn/public_html/wp-content/themes/mwd
 
             # # Pushes assets to dev site
