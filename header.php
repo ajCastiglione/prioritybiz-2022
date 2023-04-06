@@ -35,6 +35,11 @@
 
 	<?php wp_head(); ?>
 
+	<?php
+	// Load tracking scripts.
+	require get_template_directory() . '/theme/tracking-scripts.php';
+	?>
+
 
 	<?php
 	// ACF Variables
