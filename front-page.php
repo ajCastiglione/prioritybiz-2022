@@ -1,6 +1,14 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying the front page.
+ *
+ * @package pbz
+ */
 
-<?= get_template_part('template-parts/hero/general'); ?>
+get_header();
+?>
+
+<?php get_template_part( 'template-parts/hero/general' ); ?>
 
 <div id="content">
 
@@ -8,9 +16,13 @@
 
 		<main id="main" role="main">
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php
+			if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post();
+					?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
 
 						<section class="entry-content ">
 							<?php the_content(); ?>
@@ -18,8 +30,10 @@
 
 					</article>
 
-			<?php endwhile;
-			endif; ?>
+					<?php
+			endwhile;
+			endif;
+			?>
 
 		</main>
 

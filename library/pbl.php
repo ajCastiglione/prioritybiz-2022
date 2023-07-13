@@ -99,25 +99,26 @@ function pbl_gallery_style( $css ) {
 SCRIPTS & ENQUEUEING
  *********************/
 
-// loading modernizr and jquery, and reply script
+/**
+ * Enqueue scripts and styles.
+ */
 function pbl_scripts_and_styles() {
-	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
-
 	if ( ! is_admin() ) {
 
-		// register main stylesheet
-		wp_register_style( 'mwd-stylesheet', get_stylesheet_directory_uri() . '/library/dist/style.css', array(), '', 'all' );
+		// register main stylesheet.
+		wp_register_style( 'mwd-stylesheet', get_stylesheet_directory_uri() . '/library/dist/style.css', array(), '1.0', 'all' );
 
-		// External stylesheets
-		wp_register_style( 'bs-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap-grid.min.css', array( 'mwd-stylesheet' ), false );
-		wp_register_style( 'bs-utils', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap-utilities.min.css', array( 'mwd-stylesheet' ), false );
+		// External stylesheets.
+		wp_register_style( 'bs-grid', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap-grid.min.css', array( 'mwd-stylesheet' ), '1.0' );
+		wp_register_style( 'bs-utils', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap-utilities.min.css', array( 'mwd-stylesheet' ), '1.0' );
+		wp_register_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', array( 'mwd-stylesheet' ), '1.0' );
 
 		// Get file modified time.
 		$filemtime = filemtime( get_stylesheet_directory() . '/library/dist/master.min.js' );
-		// adding scripts file in the footer
+		// adding scripts file in the footer.
 		wp_register_script( 'mwd-js', get_stylesheet_directory_uri() . '/library/dist/master.min.js', array( 'jquery' ), $filemtime, true );
 
-		// enqueue styles and scripts
+		// enqueue styles and scripts.
 		wp_enqueue_style( 'mwd-stylesheet' );
 		wp_enqueue_style( 'pbl-ie-only' );
 		wp_enqueue_style( 'bs-grid' );
