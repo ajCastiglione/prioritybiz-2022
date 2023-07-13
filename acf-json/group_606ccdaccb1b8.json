@@ -6,6 +6,7 @@
             "key": "field_606ccdb67e6ed",
             "label": "Global",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_606ccdc27e6ee",
             "label": "Header",
             "name": "header",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -37,6 +39,7 @@
                     "key": "field_606ccdc67e6ef",
                     "label": "Site Identity",
                     "name": "",
+                    "aria-label": "",
                     "type": "tab",
                     "instructions": "",
                     "required": 0,
@@ -53,6 +56,7 @@
                     "key": "field_606ccdce7e6f0",
                     "label": "Logo",
                     "name": "logo",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -72,6 +76,48 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_64b086a5b7621",
+                    "label": "Hero",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_64b086aeb7622",
+                    "label": "Default Hero Image",
+                    "name": "default_hero_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium"
                 }
             ]
         },
@@ -79,6 +125,7 @@
             "key": "field_60b3e69034c32",
             "label": "Banner",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -95,6 +142,7 @@
             "key": "field_60b3e72166a14",
             "label": "Show Banner?",
             "name": "show_banner",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -114,6 +162,7 @@
             "key": "field_60b3e69634c33",
             "label": "Banner Fields",
             "name": "banner_fields",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -137,6 +186,7 @@
                     "key": "field_60b3e6bb48e33",
                     "label": "Content",
                     "name": "",
+                    "aria-label": "",
                     "type": "tab",
                     "instructions": "",
                     "required": 0,
@@ -153,6 +203,7 @@
                     "key": "field_60b3e6a334c34",
                     "label": "Message",
                     "name": "message",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -188,5 +239,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622402885
+    "show_in_rest": 0,
+    "modified": 1689290421
 }
