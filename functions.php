@@ -40,9 +40,9 @@ function pbl_ahoy() {
 	// adding sidebars to WordPress (these are created in functions.php).
 	add_action( 'widgets_init', 'pbl_register_sidebars' );
 
-	// cleaning up random code around images
+	// cleaning up random code around images.
 	add_filter( 'the_content', 'pbl_filter_ptags_on_images' );
-	// cleaning up excerpt
+	// cleaning up excerpt.
 	add_filter( 'excerpt_more', 'pbl_excerpt_more' );
 
 	// Adding full-width blocks in editor support.
@@ -53,19 +53,28 @@ function pbl_ahoy() {
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 	remove_action( 'admin_print_styles', 'print_emoji_styles' );
-} /* end pbl ahoy */
-
-// let's get this party started
+}
 add_action( 'after_setup_theme', 'pbl_ahoy' );
 
 /************* LOGIN PAGE STYLES  *************/
 
+/**
+ * Add custom styles to the login page.
+ *
+ * @return void
+ */
 function my_admin_theme_style() {
-	wp_enqueue_style( 'my-admin-theme', get_stylesheet_directory_uri() . '/library/css/login.css' );
+	wp_enqueue_style( 'my-admin-theme', get_stylesheet_directory_uri() . '/library/css/login.css', null, '1.0' );
 }
 add_action( 'admin_enqueue_scripts', 'my_admin_theme_style' );
 add_action( 'login_enqueue_scripts', 'my_admin_theme_style' );
 
+/**
+ * Change the login logo URL.
+ *
+ * @param string $url the url.
+ * @return string
+ */
 function minerva_url( $url ) {
 	return 'https://minervawebdevelopment.com';
 }
