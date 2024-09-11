@@ -33,7 +33,7 @@
         "webpack-stream": "5.0.0"
     },
     "dependencies": {
-        "gulp": "^4",
+        "gulp": "^5.0.0",
         "wp-prettier": "^2.2.1-beta-1"
     }
 }
