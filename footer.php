@@ -21,7 +21,7 @@
 						<a href="<?php echo esc_url( site_url() ); ?>/privacy-policy">Privacy Policy</a>
 					</div>
 					<div>
-						<span>Location: 4001 Rivers Rd Tonawanda, NY 14150</span>
+						<span>Location: 4001 River Rd Tonawanda, NY 14150</span>
 					</div>
 				</div>
 				<div class="developer col-sm-12 col-md-6 mb-2">
